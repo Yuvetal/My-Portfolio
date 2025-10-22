@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Resume from "./assets/Resume.pdf";
 import "./Hero.css";
 
 function Hero() {
@@ -56,7 +57,7 @@ function Hero() {
             </a>
             
   <a
-    href="/Resume.pdf"
+    href={Resume}
     download="Logu_Ajith_Kumar_CV.pdf"
     className="btn download"
   >
