@@ -1,0 +1,126 @@
+/* Base resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+background: linear-gradient(-45deg, #000000, #0a0a33, #000000);
+background-size: 400% 400%;
+animation: gradientMove 10s ease infinite;
+}
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Links */
+a {
+  color: #1A1AFF; /* dark blue accent */
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  text-shadow: 0 0 8px #1A1AFF;
+}
+
+/* Buttons */
+button {
+  background-color: #1A1AFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+button:hover {
+  box-shadow: 0 0 10px #1A1AFF;
+}
+
+/* Section spacing */
+section {
+  padding: 80px 20px;
+}
+/* ===== PROJECT SECTION ===== */
+#projects {
+  padding: 80px 20px;
+}
+
+#projects h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #1A1AFF;
+}
+
+/* Card container */
+#projects div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Individual project card */
+#projects div > div {
+  background: rgba(17, 17, 17, 0.9);
+  border: 1px solid rgba(26, 26, 255, 0.2);
+  border-radius: 16px;
+  padding: 25px;
+  width: 280px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(26, 26, 255, 0.1);
+}
+
+#projects div > div:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(26, 26, 255, 0.4);
+  border-color: rgba(26, 26, 255, 0.4);
+}
+
+/* Title inside card */
+#projects h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #1A1AFF;
+}
+
+/* Description text */
+#projects p {
+  color: #CCCCCC;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* Project link button */
+#projects a {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #1A1AFF;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+#projects a:hover {
+  box-shadow: 0 0 10px #1A1AFF;
+  transform: scale(1.05);
+}
+#projects div > div {
+  background: linear-gradient(145deg, #12122b, #1e1e3f);
+  border: 1px solid rgba(26, 26, 255, 0.2);
+  border-radius: 16px;
+  padding: 25px;
+  width: 280px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(26, 26, 255, 0.1);
+}
+

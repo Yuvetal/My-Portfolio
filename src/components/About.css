@@ -1,0 +1,19 @@
+.about-section {
+  padding: 80px 10%; /* adds breathing space */
+  text-align: left;  /* ensures left alignment */
+  color: #cccccc;
+}
+
+.about-section h2 {
+  color: #1a1aff;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: left; /* keep heading aligned left */
+}
+
+.about-section p {
+  max-width: 800px;
+  line-height: 1.7;
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+}

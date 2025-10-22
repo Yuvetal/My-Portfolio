@@ -1,0 +1,160 @@
+/* === AURORA BACKGROUND === */
+.hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 0 10%;
+  overflow: hidden;
+  background: transparent;
+}
+
+/* Aurora gradient blobs */
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  border-radius: 50%;
+  filter: blur(160px);
+  animation: float 15s infinite ease-in-out alternate;
+  z-index: 0;
+}
+.hero::before {
+  background: #1a1aff;
+  top: -200px;
+  left: -200px;
+  opacity: 0.35;
+}
+.hero::after {
+  background: #00bfff;
+  bottom: -200px;
+  right: -200px;
+  opacity: 0.25;
+}
+
+@keyframes float {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(80px, -60px); }
+}
+
+/* === CONTENT LAYER === */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* === LEFT TEXT === */
+.hero-text h1 {
+  font-size: 3.2rem;
+  color: #1a1aff;
+  margin-bottom: 20px;
+  animation: fadeUp 1.2s ease forwards;
+}
+.hero-text p {
+  font-size: 1.2rem;
+  color: #cccccc;
+  margin-bottom: 30px;
+  animation: fadeUp 1.6s ease forwards;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === BUTTON (BTN-C: Soft Hover) === */
+.hero-text button {
+  background: transparent;
+  color: #1a1aff;
+  border: 2px solid #1a1aff;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.hero-text button:hover {
+  background: #1a1aff;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #1a1aff80;
+}
+
+/* === IMAGE === */
+.hero-img {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  border-radius: 30% 70% 70% 30% / 40% 40% 60% 60%;
+  overflow: hidden;
+  border: 3px solid #1a1aff;
+  box-shadow: 0 0 25px #1a1aff60;
+  animation: floatY 5s ease-in-out infinite alternate;
+}
+
+@keyframes floatY {
+  from { transform: translateY(0px); }
+  to { transform: translateY(-15px); }
+}
+
+.hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+}
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+/* Reuse same style as button for links */
+.hero-buttons .btn {
+  background: transparent;
+  color: #1a1aff;
+  border: 2px solid #1a1aff;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-buttons .btn:hover {
+  background: #1a1aff;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #1a1aff80;
+}
+
+/* For secondary (LinkedIn) button */
+.hero-buttons .btn.secondary {
+  border-color: #00bfff;
+  color: #00bfff;
+}
+
+.hero-buttons .btn.secondary:hover {
+  background: #00bfff;
+  color: #fff;
+  box-shadow: 0 0 20px #00bfff80;
+}
