@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "homepage": "https://Yuvetal.github.io/My-Portfolio/",
+  "homepage": "https://yuvetal.github.io/My-Portfolio/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 function Contact() {
   const [submitted, setSubmitted] = useState(false);
 
@@ -7,11 +7,12 @@ function Contact() {
  e.preventDefault();
 
     emailjs.sendForm(
-      "service_wyrrqe6",
-      "template_ompv01y",
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
       e.target,
-      "W-dFzjx-NXal9FQd3"
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
     )
+
     .then(() => {
       setSubmitted(true);
       setTimeout(() => setSubmitted(false), 3000);
